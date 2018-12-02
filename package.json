@@ -1,0 +1,15 @@
+{
+  "name": "puppeteer-perf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "App.test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodegit": "^0.23.0",
+    "puppeteer": "^1.11.0"
+  }
+}
