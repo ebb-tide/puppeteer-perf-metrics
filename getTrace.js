@@ -1,5 +1,11 @@
 const puppeteer = require('puppeteer')
 
+gitHash = require('child_process')
+  .execSync('git rev-parse HEAD')
+  .toString()
+  .trim()
+  .slice(0, 7)
+
 const doAllTheThings = async () => {
   const browser = await puppeteer.launch({
     headless: false,
@@ -12,7 +18,7 @@ const doAllTheThings = async () => {
 
   // await page.screenshot({path: 'example.png'})
 
-  await page.tracing.start({path: './trace.json'})
+  await page.tracing.start({path: `./trace_${gitHash}.json`})
 
   await page.mouse.move(500, 500, {steps: 10})
   // await page.click('.dash-graph-context--button')
